@@ -1,0 +1,23 @@
+{% extends 'layouts/main.html' %}
+{% block title %}New Show Listing{% endblock %}
+{% block content %}
+  <div class="form-wrapper">
+    <form method="post" class="form">
+      {{ form.csrf_token() }}
+      <h3 class="form-heading">List a new show</h3>
+      <div class="form-group">
+        {{ form.artist_id.label }} <br>
+        {{ form.artist_id }}
+      </div>
+      <div class="form-group">
+        {{ form.venue_id.label }} <br>
+        {{ form.venue_id }}
+      </div>
+      <div class="form-group">
+        {{ form.start_time.label }} <br>
+        {{ form.start_time }}
+      </div>
+      <input type="submit" value="Create Venue" class="btn btn-primary btn-lg btn-block">
+    </form>
+  </div>
+{% endblock %}
